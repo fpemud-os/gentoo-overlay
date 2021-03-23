@@ -53,6 +53,7 @@ RDEPEND="sys-apps/systemd
          dev-python/strict_pgs
          dev-python/pyparted
          dev-python/requests
+         dev-python/robust_layer
          dev-perl/Digest-SHA1
          dev-perl/Proc-ProcessTable"
 
