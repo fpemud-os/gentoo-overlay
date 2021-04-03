@@ -18,3 +18,11 @@ IUSE=""
 
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
 RDEPEND=""
+
+src_install() {
+        distutils-r1_src_install
+
+	dodir /usr/libexec/robust_layer
+	cp libexec/* ${D}/usr/libexec/robust_layer
+	chmod 755 ${D}/usr/libexec/robust_layer/*
+}
