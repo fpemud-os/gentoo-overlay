@@ -32,6 +32,7 @@ RDEPEND="sys-apps/systemd
          sys-fs/reiserfsprogs
          sys-fs/xfsprogs
          sys-fs/ntfs3g
+         net-fs/httpdirfs
          >=sys-fs/dosfstools-4.0-r1
          sys-apps/kmod[python]
          sys-apps/smartmontools
