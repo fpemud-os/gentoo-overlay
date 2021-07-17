@@ -34,7 +34,6 @@ RDEPEND="sys-apps/systemd
          net-fs/httpdirfs
          >=sys-fs/dosfstools-4.0-r1
          sys-apps/kmod[python]
-         sys-apps/lm-sensors
          sys-apps/smartmontools
          sys-apps/dmidecode
          app-arch/cpio
