@@ -34,12 +34,14 @@ RDEPEND="sys-apps/systemd
          net-fs/httpdirfs
          >=sys-fs/dosfstools-4.0-r1
          sys-apps/kmod[python]
+         sys-apps/lm-sensors
          sys-apps/smartmontools
          sys-apps/dmidecode
          app-arch/cpio
          app-arch/xz-utils
          app-arch/zip
          sys-libs/tdb
+         dev-python/PySensors
          dev-python/asyncio-pool
          dev-python/blessed
          dev-python/crcmod
