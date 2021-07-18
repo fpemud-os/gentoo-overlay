@@ -40,7 +40,6 @@ RDEPEND="sys-apps/systemd
          app-arch/xz-utils
          app-arch/zip
          sys-libs/tdb
-         dev-python/PySensors
          dev-python/asyncio-pool
          dev-python/blessed
          dev-python/crcmod
