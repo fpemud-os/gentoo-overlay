@@ -51,6 +51,7 @@ RDEPEND="sys-apps/systemd
          dev-python/pyopenssl
          dev-python/pyudev
          dev-python/strict_fsh
+         dev-python/strict_hdds
          dev-python/strict_pgs
          dev-python/pyparted
          dev-python/requests
