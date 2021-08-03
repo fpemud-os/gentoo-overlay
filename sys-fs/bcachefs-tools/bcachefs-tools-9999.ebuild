@@ -4,16 +4,17 @@
 EAPI=7
 
 inherit git-r3
-EGIT_REPO_URI="https://evilpiepirate.org/git/bcachefs-tools.git/"
 
 DESCRIPTION="Tools for bcachefs"
 HOMEPAGE="https://bcachefs.org"
+EGIT_REPO_URI="https://evilpiepirate.org/git/bcachefs-tools.git/"
 
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 
-RDEPEND=""
+RDEPEND="dev-libs/userspace-rcu
+         app-crypt/libscrypt"
 DEPEND="${RDEPEND}"
 
 #src_install() {
