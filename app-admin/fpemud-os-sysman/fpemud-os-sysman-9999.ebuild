@@ -33,21 +33,18 @@ RDEPEND="sys-apps/systemd
          sys-fs/ntfs3g
          net-fs/httpdirfs
          >=sys-fs/dosfstools-4.0-r1
-         sys-apps/kmod[python]
          sys-apps/smartmontools
          sys-apps/dmidecode
-         app-arch/cpio
          app-arch/xz-utils
          app-arch/zip
          sys-libs/tdb
          dev-python/asyncio-pool
+         dev-python/bbki
          dev-python/blessed
-         dev-python/crcmod
          dev-python/lxml
          dev-python/passlib
          dev-python/ntplib
          dev-python/pygobject
-         dev-python/pylkc
          dev-python/pyopenssl
          dev-python/pyudev
          dev-python/strict_fsh

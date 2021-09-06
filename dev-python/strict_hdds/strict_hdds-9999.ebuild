@@ -17,6 +17,7 @@ KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
-RDEPEND="sys-fs/lvm2
+RDEPEND="dev-pytho/crcmod
+         sys-fs/lvm2
          sys-fs/dosfstools
          sys-apps/util-linux"
