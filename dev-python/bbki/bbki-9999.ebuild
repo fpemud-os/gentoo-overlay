@@ -20,5 +20,6 @@ DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
 RDEPEND="app-arch/cpio
          dev-python/pylkc
          dev-python/anytree
+         dev-python/ordered-set
          sys-apps/kmod[python]"
 
