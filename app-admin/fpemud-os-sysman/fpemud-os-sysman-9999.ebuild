@@ -69,6 +69,9 @@ DEPEND="${RDEPEND}
         virtual/pkgconfig"
 
 pkg_extra_files() {
+	echo "/var/cache/bbki/***"
+	echo "/var/lib/bbki/***"
+
 	echo "/var/cache/portage/***"
 	echo "/var/lib/portage/***"
 }
