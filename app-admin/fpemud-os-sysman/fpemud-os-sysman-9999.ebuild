@@ -13,7 +13,7 @@ EGIT_REPO_URI="https://github.com/fpemud-os/sysman"
 KEYWORDS="x86 amd64"
 LICENSE="GPL-3"
 SLOT="0"
-IUSE=""
+IUSE="os-prober"
 
 RDEPEND="sys-apps/systemd
          app-admin/gentoo-bashrc
@@ -25,7 +25,6 @@ RDEPEND="sys-apps/systemd
          dev-vcs/git
          dev-vcs/subversion
          sys-boot/grub:2[grub_platforms_pc,grub_platforms_efi-64]
-         sys-boot/os-prober
          sys-fs/lvm2
          sys-fs/squashfs-tools
          sys-fs/reiserfsprogs
@@ -65,8 +64,19 @@ RDEPEND="${RDEPEND}
          dev-libs/c-list
          dev-libs/c-dynbuf"
 
+# dependencies for auxillary os detection
+RDEPEND="${RDEPEND}
+         os-prober? ( sys-boot/os-prober )"
+
 DEPEND="${RDEPEND}
         virtual/pkgconfig"
+
+src_prepare() {
+	eapply_user
+	if ! use os-prober ; then
+		sed -i -e "s/supportOsProber = .*/supportOsProber = False/g" "${WORKDIR}/${P}/lib/fm_param.py"
+	fi
+}
 
 pkg_extra_files() {
 	echo "/var/cache/bbki/***"
