@@ -17,9 +17,9 @@ RDEPEND="dev-libs/userspace-rcu
          app-crypt/libscrypt"
 DEPEND="${RDEPEND}"
 
-#src_install() {
+src_install() {
 #	dodir /usr/sbin/
 #	dodir /usr/share/man/man8
 #	dodir /lib/udev/rules.d
-#	default
-#}
+	emake DESTDIR="${D}" install
+}
