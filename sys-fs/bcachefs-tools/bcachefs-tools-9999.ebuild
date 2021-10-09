@@ -22,4 +22,5 @@ src_install() {
 #	dodir /usr/share/man/man8
 #	dodir /lib/udev/rules.d
 	emake DESTDIR="${D}" install
+	rm -rf ${D}/etc/initramfs-tools
 }
