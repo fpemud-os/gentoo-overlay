@@ -19,10 +19,10 @@ DEPEND="${RDEPEND}"
 
 src_prepare() {
 	default
-	sed -i 's/PREFIX\?=\/usr\/local/PREFIX\?=\/usr/g' Makefile
+	sed -i 's/PREFIX?=\/usr\/local/PREFIX?=\/usr/g' Makefile
 }
 
 src_install() {
 	default
-	rm -rf ${D}/etc/initramfs-tools
+	rm -rf ${D}/etc
 }
