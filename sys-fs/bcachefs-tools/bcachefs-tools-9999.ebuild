@@ -17,10 +17,12 @@ RDEPEND="dev-libs/userspace-rcu
          app-crypt/libscrypt"
 DEPEND="${RDEPEND}"
 
+src_prepare() {
+	default
+	sed -i 's/PREFIX\?=\/usr\/local/PREFIX\?=\/usr/g' Makefile
+}
+
 src_install() {
-#	dodir /usr/sbin/
-#	dodir /usr/share/man/man8
-#	dodir /lib/udev/rules.d
-	emake DESTDIR="${D}" install
+	default
 	rm -rf ${D}/etc/initramfs-tools
 }
