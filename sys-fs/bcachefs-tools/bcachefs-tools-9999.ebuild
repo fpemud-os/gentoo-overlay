@@ -24,5 +24,5 @@ src_prepare() {
 
 src_install() {
 	default
-	rm -rf ${D}/etc
+	rm -rf ${D}/usr/share/initramfs-tools
 }
