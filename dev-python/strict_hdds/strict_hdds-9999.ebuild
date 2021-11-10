@@ -18,6 +18,7 @@ IUSE=""
 
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
 RDEPEND="dev-python/crcmod
+         dev-python/psutil
          sys-fs/lvm2
          sys-fs/dosfstools
          sys-apps/util-linux"
