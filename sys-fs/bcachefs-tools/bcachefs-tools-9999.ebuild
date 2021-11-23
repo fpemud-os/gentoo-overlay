@@ -20,6 +20,7 @@ DEPEND="${RDEPEND}"
 src_prepare() {
 	default
 	sed -i 's/PREFIX?=\/usr\/local/PREFIX?=\/usr/g' Makefile
+	sed -i 's/$(DESTDIR)$(PREFIX)\/lib\//$(DESTDIR)$(PREFIX)\/lib64\//g' Makefile
 }
 
 src_install() {
