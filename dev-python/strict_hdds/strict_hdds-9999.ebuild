@@ -14,11 +14,18 @@ EGIT_REPO_URI="https://github.com/fpemud-os/strict_hdds.git"
 LICENSE="GPLv3"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
-IUSE=""
+IUSE="+lvm"
 
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
 RDEPEND="dev-python/crcmod
          dev-python/psutil
-         sys-fs/lvm2
+         lvm? ( sys-fs/lvm2 )
          sys-fs/dosfstools
          sys-apps/util-linux"
+
+src_prepare() {
+        eapply_user
+        if ! use lvm ; then
+                rm -rf "${WORKDIR}/${P}/python3/strict_hdds"/layout_*lvm*.py
+        fi
+}
