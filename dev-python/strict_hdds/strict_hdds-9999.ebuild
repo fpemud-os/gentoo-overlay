@@ -14,18 +14,18 @@ EGIT_REPO_URI="https://github.com/fpemud-os/strict_hdds.git"
 LICENSE="GPLv3"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
-IUSE="+lvm"
+IUSE="+device-mapper"
 
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
 RDEPEND="dev-python/crcmod
          dev-python/psutil
-         lvm? ( sys-fs/lvm2 )
+         device-mapper? ( sys-fs/lvm2 )
          sys-fs/dosfstools
          sys-apps/util-linux"
 
 src_prepare() {
         eapply_user
-        if ! use lvm ; then
+        if ! use device-mapper ; then
                 rm -rf "${WORKDIR}/${P}/python3/strict_hdds"/layout_*lvm*.py
         fi
 }

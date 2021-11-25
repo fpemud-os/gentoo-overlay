@@ -25,7 +25,6 @@ RDEPEND="sys-apps/systemd
          dev-vcs/git
          dev-vcs/subversion
          sys-boot/grub:2[grub_platforms_pc,grub_platforms_efi-64]
-         sys-fs/lvm2
          sys-fs/squashfs-tools
          sys-fs/reiserfsprogs
          sys-fs/xfsprogs
