@@ -3,15 +3,15 @@
 # $Header: $
 
 EAPI=7
-PYTHON_COMPAT=( python{3_6,3_7,3_8,3_9} )
+PYTHON_COMPAT=( python{3_6,3_7,3_8,3_9,3_10} )
 
-inherit distutils-r1 git-r3
+inherit distutils-r1
 
-DESCRIPTION="A simple python module for gentoo live disk building."
+DESCRIPTION="A Python wrapper around Linux's renameat2 system call"
 HOMEPAGE=""
-EGIT_REPO_URI="https://github.com/fpemud-os/glivedisk.git"
+SRC_URI="https://github.com/jordemort/${PN}/releases/download/v${PV}/renameat2-${PV}.tar.gz"
 
-LICENSE="GPLv3"
+LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
 IUSE=""
