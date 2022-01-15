@@ -16,3 +16,7 @@ SLOT="0"
 IUSE=""
 
 RDEPEND="dev-python/strict_hdds"
+
+src_install() {
+    dobin rescue-*
+}
