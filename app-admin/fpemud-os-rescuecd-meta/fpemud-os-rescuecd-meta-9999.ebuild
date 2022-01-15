@@ -8,7 +8,7 @@ inherit git-r3
 
 DESCRIPTION="Meta ebuild for Fpemud OS Rescue CD"
 SRC_URI=""
-EGIT_REPO_URI="https://github.com/fpemud-os/livecd-scripts"
+EGIT_REPO_URI="https://github.com/fpemud-os/rescuecd-scripts"
 
 KEYWORDS="x86 amd64"
 LICENSE="GPL-3"
