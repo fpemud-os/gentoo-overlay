@@ -14,7 +14,8 @@ LICENSE="GPL-2"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 
 RDEPEND="dev-libs/userspace-rcu
-         app-crypt/libscrypt"
+         app-crypt/libscrypt
+         dev-libs/libsodium"
 DEPEND="${RDEPEND}"
 
 src_prepare() {
