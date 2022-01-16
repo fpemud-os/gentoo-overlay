@@ -18,6 +18,7 @@ IUSE="+device-mapper"
 
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
 RDEPEND="dev-python/crcmod
+         dev-python/pyparted
          dev-python/psutil
          device-mapper? ( sys-fs/lvm2 )
          sys-fs/dosfstools
