@@ -15,7 +15,13 @@ LICENSE="GPL-3"
 SLOT="0"
 IUSE=""
 
-RDEPEND="dev-python/strict_hdds"
+# for general use
+RDEPEND="${RDEPEND}
+         dev-python/robust_layer"
+
+# for rescuecd-scripts
+RDEPEND="${RDEPEND}
+         dev-python/strict_hdds"
 
 src_install() {
     dobin rescue-*
