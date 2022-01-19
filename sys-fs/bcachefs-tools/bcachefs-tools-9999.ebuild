@@ -16,7 +16,8 @@ KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 RDEPEND="dev-libs/userspace-rcu
          app-crypt/libscrypt
          dev-libs/libsodium
-         app-arch/lz4"
+         app-arch/lz4
+         sys-apps/keyutils"
 DEPEND="${RDEPEND}"
 
 src_prepare() {
