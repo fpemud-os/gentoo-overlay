@@ -36,9 +36,10 @@ RDEPEND="sys-apps/systemd
          dev-python/asyncio-pool
          dev-python/bbki
          dev-python/blessed
+         dev-python/gstage4
          dev-python/lxml
-         dev-python/passlib
          dev-python/ntplib
+         dev-python/passlib
          dev-python/pygobject
          dev-python/pyopenssl
          dev-python/pyudev
