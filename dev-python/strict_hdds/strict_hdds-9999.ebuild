@@ -14,21 +14,19 @@ EGIT_REPO_URI="https://github.com/fpemud-os/strict_hdds.git"
 LICENSE="GPLv3"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
-IUSE="bcache bcachefs btrfs device-mapper"
+IUSE="bcachefs btrfs device-mapper"
 
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
 RDEPEND="dev-python/crcmod
          dev-python/pyparted
          dev-python/psutil
-         device-mapper? ( sys-fs/lvm2 )
          sys-fs/dosfstools
-         sys-apps/util-linux"
+         bcachefs? ( sys-fs/bcachefs-tools )
+         btrfs? ( sys-fs/btrfs-progs )
+         device-mapper? ( sys-fs/lvm2 )"
 
 src_prepare() {
         eapply_user
-        if ! use bcache ; then
-                rm -rf "${WORKDIR}/${P}/python3/strict_hdds"/layout_*_bcache_*.py
-        fi
         if ! use bcachefs ; then
                 rm -rf "${WORKDIR}/${P}/python3/strict_hdds"/layout_*_bcachefs*.py
         fi
