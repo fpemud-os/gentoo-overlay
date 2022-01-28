@@ -26,9 +26,6 @@ RDEPEND="sys-apps/systemd
          dev-vcs/subversion
          sys-boot/grub:2[grub_platforms_pc,grub_platforms_efi-64]
          sys-fs/squashfs-tools
-         sys-fs/reiserfsprogs
-         sys-fs/xfsprogs
-         sys-fs/ntfs3g
          net-fs/httpdirfs
          >=sys-fs/dosfstools-4.0-r1
          sys-apps/smartmontools
@@ -46,7 +43,7 @@ RDEPEND="sys-apps/systemd
          dev-python/pyopenssl
          dev-python/pyudev
          dev-python/strict_fsh
-         dev-python/strict_hdds
+         dev-python/strict_hdds[bcachefs]
          dev-python/strict_pgs
          dev-python/pyparted
          dev-python/requests
@@ -57,11 +54,6 @@ RDEPEND="sys-apps/systemd
 # dependencies for building linux kernel
 RDEPEND="${RDEPEND}
          sys-devel/bc"
-
-# dependencies for lvm-lv-activate in initramfs
-RDEPEND="${RDEPEND}
-         dev-libs/c-list
-         dev-libs/c-dynbuf"
 
 # dependencies for auxillary os detection
 RDEPEND="${RDEPEND}
