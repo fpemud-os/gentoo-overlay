@@ -14,12 +14,19 @@ EGIT_REPO_URI="https://github.com/fpemud-os/bbki.git"
 LICENSE="GPLv3"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
-IUSE=""
+IUSE="device-mapper"
 
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
 RDEPEND="app-arch/cpio
          dev-python/pylkc
          dev-python/anytree
          dev-python/ordered-set
-         sys-apps/kmod[python]"
+         sys-apps/kmod[python]
+         device-mapper? ( sys-fs/lvm2 )"
 
+src_prepare() {
+        eapply_user
+        if ! use device-mapper ; then
+                sed -i -e "/HostDiskLvmLv,/d" "${WORKDIR}/${P}/python3/bbki/_po.py"
+        fi
+}
