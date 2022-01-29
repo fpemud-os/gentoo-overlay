@@ -30,6 +30,7 @@ RDEPEND="sys-apps/systemd
          >=sys-fs/dosfstools-4.0-r1
          sys-apps/smartmontools
          sys-apps/dmidecode
+         sys-apps/util-linux[python]
          app-arch/xz-utils
          app-arch/zip
          sys-libs/tdb
