@@ -21,7 +21,7 @@ RDEPEND="${RDEPEND}
 
 # for rescuecd-scripts
 RDEPEND="${RDEPEND}
-         dev-python/strict_hdds"
+         dev-python/strict_hdds[btrfs,bcachefs]"
 
 src_install() {
     dobin rescue-*
