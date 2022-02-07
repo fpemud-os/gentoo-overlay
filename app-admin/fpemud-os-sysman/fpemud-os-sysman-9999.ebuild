@@ -34,7 +34,7 @@ RDEPEND="sys-apps/systemd
          app-arch/zip
          sys-libs/tdb
          dev-python/asyncio-pool
-         dev-python/bbki
+         dev-python/bbki[btrfs,bcachefs]
          dev-python/blessed
          dev-python/gstage4
          dev-python/lxml

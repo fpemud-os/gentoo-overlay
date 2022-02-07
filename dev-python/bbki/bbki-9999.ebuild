@@ -14,7 +14,7 @@ EGIT_REPO_URI="https://github.com/fpemud-os/bbki.git"
 LICENSE="GPLv3"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
-IUSE="device-mapper btrfs"
+IUSE="device-mapper btrfs bcachefs"
 
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
 RDEPEND="app-arch/cpio
@@ -33,5 +33,8 @@ src_prepare() {
         fi
         if ! use btrfs ; then
                 sed -i -e "/HostDiskBtrfsRaid,/d" "${WORKDIR}/${P}/python3/bbki/_po.py"
+        fi
+        if ! use bcachefs ; then
+                sed -i -e "/HostDiskBcachefsRaid,/d" "${WORKDIR}/${P}/python3/bbki/_po.py"
         fi
 }
