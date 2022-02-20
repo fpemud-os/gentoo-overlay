@@ -34,7 +34,7 @@ RDEPEND="sys-apps/systemd
          app-arch/zip
          sys-libs/tdb
          dev-python/asyncio-pool
-         dev-python/bbki[btrfs,bcachefs]
+         dev-python/bbki[btrfs]
          dev-python/blessed
          dev-python/gstage4
          dev-python/lxml
@@ -44,11 +44,12 @@ RDEPEND="sys-apps/systemd
          dev-python/pyopenssl
          dev-python/pyudev
          dev-python/strict_fsh
-         dev-python/strict_hdds[btrfs,bcachefs]
+         dev-python/strict_hdds[btrfs]
          dev-python/strict_pgs
          dev-python/pyparted
          dev-python/requests
          dev-python/robust_layer
+         dev-python/wstage4
          dev-perl/Digest-SHA1
          dev-perl/Proc-ProcessTable"
 
