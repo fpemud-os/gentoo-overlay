@@ -17,7 +17,6 @@ KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
-        dev-python/psutil
         dev-python/pyparted
         dev-python/reedsolomon
         sys-boot/grub"
