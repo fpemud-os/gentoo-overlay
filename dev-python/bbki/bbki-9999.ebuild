@@ -22,6 +22,7 @@ RDEPEND="app-arch/cpio
          dev-python/pylkc
          dev-python/anytree
          dev-python/ordered-set
+         dev-python/grub_install
          sys-apps/kmod[python]
          device-mapper? ( sys-fs/lvm2 )
          btrfs? ( sys-fs/btrfs-progs )"
