@@ -24,7 +24,7 @@ RDEPEND="sys-apps/systemd
          dev-util/patchutils
          dev-vcs/git
          dev-vcs/subversion
-         sys-boot/grub:2[grub_platforms_pc,grub_platforms_efi-64]
+         sys-boot/grub[grub_platforms_pc,grub_platforms_efi-64,nls,fonts,themes]
          sys-fs/squashfs-tools
          net-fs/httpdirfs
          >=sys-fs/dosfstools-4.0-r1
