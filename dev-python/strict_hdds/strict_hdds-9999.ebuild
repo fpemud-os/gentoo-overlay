@@ -8,8 +8,8 @@ PYTHON_COMPAT=( python{3_6,3_7,3_8,3_9,3_10} )
 inherit distutils-r1 git-r3
 
 DESCRIPTION="Ensures only some optimized harddisk layouts are used."
-HOMEPAGE="https://github.com/fpemud-os/strict_hdds"
-EGIT_REPO_URI="https://github.com/fpemud-os/strict_hdds.git"
+HOMEPAGE="https://gitee.com/your-own-os/strict_hdds"
+EGIT_REPO_URI="https://gitee.com/your-own-os/strict_hdds.git"
 
 LICENSE="GPLv3"
 SLOT="0"
